@@ -12,8 +12,8 @@ const UserDetails = ({ user, repositories }) => {
       <p>Lokacija: {user.location}</p>
       <h2>Repositories:</h2>
       <ul>
-        {repositories.map((repositories) => (
-          <li key={repositories.id}>{repositories.name}</li>
+        {repositories.map((repositorie) => (
+          <li key={repositorie.id}>{repositorie.name}</li>
         ))}
         <li></li>
       </ul>

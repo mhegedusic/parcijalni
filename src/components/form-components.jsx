@@ -15,7 +15,7 @@ const Form = ({ search }) => {
 
   return (
     <>
-      <input type="number" value={id} onChange={handleChange}></input>
+      <input type="text" value={id} onChange={handleChange}></input>
       <button onClick={handleSearch}>Search</button>
     </>
   );

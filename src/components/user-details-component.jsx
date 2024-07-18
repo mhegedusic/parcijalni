@@ -1,4 +1,4 @@
-const UserDetails = ({ user }) => {
+const UserDetails = ({ user, repositories }) => {
   if (!user) {
     return <p>No user data.</p>;
   }
@@ -6,13 +6,17 @@ const UserDetails = ({ user }) => {
   return (
     <div>
       <h1>User Details</h1>
-      <p>Name: {user.name}</p>
-      <p>Username: {user.username}</p>
-      <p>Email: {user.email}</p>
-      <p>
-        Address: {user.address.street}, {user.address.zipcode},{' '}
-        {user.address.city}
-      </p>
+      <img src={user.avatar_url} alt={user.name}></img>
+      <p>Naziv: {user.name}</p>
+      <p>Bio: {user.bio}</p>
+      <p>Lokacija: {user.location}</p>
+      <h2>Repositories:</h2>
+      <ul>
+        {repositories.map((repositories) => (
+          <li key={repositories.id}>{repositories.name}</li>
+        ))}
+        <li></li>
+      </ul>
     </div>
   );
 };
